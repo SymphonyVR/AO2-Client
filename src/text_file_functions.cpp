@@ -2,7 +2,7 @@
 #include "aoutils.h"
 #include "options.h"
 
-QStringList AOApplication::get_list_file(VPath path)
+inline QStringList AOApplication::get_list_file(VPath path)
 {
   return get_list_file(get_real_path(path));
 }
@@ -125,7 +125,7 @@ QMultiMap<QString, QString> AOApplication::load_demo_logs_list() const
     return l_demo_logs;
 }
 
-QString AOApplication::read_design_ini(QString p_identifier,
+inline QString AOApplication::read_design_ini(QString p_identifier,
                                        VPath p_design_path)
 {
   return read_design_ini(p_identifier, get_real_path(p_design_path));
@@ -342,7 +342,7 @@ QColor AOApplication::get_chat_color(QString p_identifier, QString p_chat)
   return return_color;
 }
 
-QString AOApplication::get_penalty_value(QString p_identifier)
+inline QString AOApplication::get_penalty_value(QString p_identifier)
 {
   return get_config_value(p_identifier, "penalty/penalty.ini", Options::getInstance().theme(),
                           Options::getInstance().subTheme(), default_theme, "");
@@ -536,7 +536,7 @@ Qt::TransformationMode AOApplication::get_misc_scaling(QString p_miscname)
   return Qt::FastTransformation;
 }
 
-QString AOApplication::get_category(QString p_char)
+inline QString AOApplication::get_category(QString p_char)
 {
   QString f_result = read_char_ini(p_char, "category", "Options");
   return f_result;
@@ -550,7 +550,7 @@ QString AOApplication::get_chat(QString p_char)
   return f_result;
 }
 
-QString AOApplication::get_chat_font(QString p_char)
+inline QString AOApplication::get_chat_font(QString p_char)
 {
   QString f_result = read_char_ini(p_char, "chat_font", "Options");
 
@@ -668,7 +668,7 @@ QString AOApplication::get_sfx_name(QString p_char, int p_emote)
   return f_result;
 }
 
-QString AOApplication::get_emote_blip(QString p_char, int p_emote)
+inline QString AOApplication::get_emote_blip(QString p_char, int p_emote)
 {
   QString f_result =
       read_char_ini(p_char, QString::number(p_emote + 1), "SoundB");
