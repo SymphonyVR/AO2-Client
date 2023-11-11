@@ -80,378 +80,378 @@ void Options::migrate()
   }
 }
 
-QString Options::theme() const
+inline QString Options::theme() const
 {
   return config.value("theme", "default").toString();
 }
 
-void Options::setTheme(QString value) { config.setValue("theme", value); }
+inline void Options::setTheme(QString value) { config.setValue("theme", value); }
 
-int Options::blipRate() const { return config.value("blip_rate", 2).toInt(); }
+inline int Options::blipRate() const { return config.value("blip_rate", 2).toInt(); }
 
-void Options::setBlipRate(int value) { config.setValue("blip_rate", value); }
+inline void Options::setBlipRate(int value) { config.setValue("blip_rate", value); }
 
-int Options::musicVolume() const
+inline int Options::musicVolume() const
 {
   return config.value("default_music", 50).toInt();
 }
 
-void Options::setMusicVolume(int value)
+inline void Options::setMusicVolume(int value)
 {
   config.setValue("default_music", value);
 }
 
-int Options::sfxVolume() const
+inline int Options::sfxVolume() const
 {
   return config.value("default_sfx", 50).toInt();
 }
 
-void Options::setSfxVolume(int value) { config.setValue("default_sfx", value); }
+inline void Options::setSfxVolume(int value) { config.setValue("default_sfx", value); }
 
-int Options::blipVolume() const
+inline int Options::blipVolume() const
 {
   return config.value("default_blip", 50).toInt();
 }
 
-void Options::setBlipVolume(int value)
+inline void Options::setBlipVolume(int value)
 {
   config.setValue("default_blip", value);
 }
 
-int Options::defaultSuppressAudio() const
+inline int Options::defaultSuppressAudio() const
 {
   return config.value("suppress_audio", 50).toInt();
 }
 
-void Options::setDefaultSupressedAudio(int value)
+inline void Options::setDefaultSupressedAudio(int value)
 {
   config.setValue("suppress_audio", value);
 }
 
-int Options::maxLogSize() const
+inline int Options::maxLogSize() const
 {
   return config.value("log_maximum", 200).toInt();
 }
 
-void Options::setMaxLogSize(int value)
+inline void Options::setMaxLogSize(int value)
 {
   config.setValue("log_maximum", value);
 }
 
-int Options::textStayTime() const
+inline int Options::textStayTime() const
 {
   return config.value("stay_time", 200).toInt();
 }
 
-void Options::setTextStayTime(int value)
+inline void Options::setTextStayTime(int value)
 {
   config.setValue("stay_time", value);
 }
 
-int Options::textCrawlSpeed() const
+inline int Options::textCrawlSpeed() const
 {
   return config.value("text_crawl", 40).toInt();
 }
 
-void Options::setTextCrawlSpeed(int value)
+inline void Options::setTextCrawlSpeed(int value)
 {
   config.setValue("text_crawl", value);
 }
 
-int Options::chatRateLimit() const
+inline int Options::chatRateLimit() const
 {
   return config.value("chat_ratelimit", 300).toInt();
 }
 
-void Options::setChatRateLimit(int value)
+inline void Options::setChatRateLimit(int value)
 {
   config.setValue("chat_ratelimit", value);
 }
 
-bool Options::logDirectionDownwards() const
+inline bool Options::logDirectionDownwards() const
 {
   return config.value("log_goes_downwards", true).toBool();
 }
 
-void Options::setLogDirectionDownwards(bool value)
+inline void Options::setLogDirectionDownwards(bool value)
 {
   config.setValue("log_goes_downwards", value);
 }
 
-bool Options::logNewline() const
+inline bool Options::logNewline() const
 {
   return config.value("log_newline", false).toBool();
 }
 
-void Options::setLogNewline(bool value)
+inline void Options::setLogNewline(bool value)
 {
   config.setValue("log_newline", value);
 }
 
-int Options::logMargin() const { return config.value("log_margin", 0).toInt(); }
+inline int Options::logMargin() const { return config.value("log_margin", 0).toInt(); }
 
-void Options::setLogMargin(int value) { config.setValue("log_margin", value); }
+inline void Options::setLogMargin(int value) { config.setValue("log_margin", value); }
 
-bool Options::logTimestampEnabled() const
+inline bool Options::logTimestampEnabled() const
 {
   return config.value("log_timestamp", false).toBool();
 }
 
-void Options::setLogTimestampEnabled(bool value)
+inline void Options::setLogTimestampEnabled(bool value)
 {
   config.setValue("log_timestamp", value);
 }
 
-QString Options::logTimestampFormat() const
+inline QString Options::logTimestampFormat() const
 {
   return config.value("log_timestamp_format", "h:mm:ss AP").toString();
 }
 
-void Options::setLogTimestampFormat(QString value)
+inline void Options::setLogTimestampFormat(QString value)
 {
   config.setValue("log_timestamp_format", value);
 }
 
-bool Options::logIcActions() const
+inline bool Options::logIcActions() const
 {
   return config.value("log_ic_actions", true).toBool();
 }
 
-void Options::setLogIcActions(bool value)
+inline void Options::setLogIcActions(bool value)
 {
   config.setValue("log_ic_actions", value);
 }
 
-bool Options::customShownameEnabled() const
+inline bool Options::customShownameEnabled() const
 {
   return config.value("show_custom_shownames", true).toBool();
 }
 
-void Options::setCustomShownameEnabled(bool value)
+inline void Options::setCustomShownameEnabled(bool value)
 {
   config.setValue("show_custom_shownames", value);
 }
 
-QString Options::username() const
+inline QString Options::username() const
 {
   return config.value("default_username", "").value<QString>();
 }
 
-void Options::setUsername(QString value)
+inline void Options::setUsername(QString value)
 {
   config.setValue("default_username", value);
 }
 
-QString Options::shownameOnJoin() const
+inline QString Options::shownameOnJoin() const
 {
   return config.value("default_showname", "").toString();
 }
 
-void Options::setShownameOnJoin(QString value)
+inline void Options::setShownameOnJoin(QString value)
 {
   config.setValue("default_showname", value);
 }
 
-QString Options::audioOutputDevice() const
+inline QString Options::audioOutputDevice() const
 {
   return config.value("default_audio_device", "default").toString();
 }
 
-void Options::setAudioOutputDevice(QString value)
+inline void Options::setAudioOutputDevice(QString value)
 {
   config.setValue("default_audio_device", value);
 }
 
-bool Options::blankBlip() const
+inline bool Options::blankBlip() const
 {
   return config.value("blank_blip", false).toBool();
 }
 
-void Options::setBlankBlip(bool value) { config.setValue("blank_blip", value); }
+inline void Options::setBlankBlip(bool value) { config.setValue("blank_blip", value); }
 
-bool Options::loopingSfx() const
+inline bool Options::loopingSfx() const
 {
   return config.value("looping_sfx", true).toBool();
 }
 
-void Options::setLoopingSfx(bool value)
+inline void Options::setLoopingSfx(bool value)
 {
   config.setValue("looping_sfx", value);
 }
 
-bool Options::objectionStopMusic() const
+inline bool Options::objectionStopMusic() const
 {
   return config.value("objection_stop_music", false).toBool();
 }
 
-void Options::setObjectionStopMusic(bool value)
+inline void Options::setObjectionStopMusic(bool value)
 {
   config.setValue("objection_stop_music", value);
 }
 
-bool Options::streamingEnabled() const
+inline bool Options::streamingEnabled() const
 {
   return config.value("streaming_enabled", true).toBool();
 }
 
-void Options::setStreamingEnabled(bool value)
+inline void Options::setStreamingEnabled(bool value)
 {
   config.setValue("streaming_enabled", value);
 }
 
-bool Options::objectionSkipQueueEnabled() const
+inline bool Options::objectionSkipQueueEnabled() const
 {
   return config.value("instant_objection", true).toBool();
 }
 
-void Options::setObjectionSkipQueueEnabled(bool value)
+inline void Options::setObjectionSkipQueueEnabled(bool value)
 {
   config.setValue("instant_objection", value);
 }
 
-bool Options::desynchronisedLogsEnabled() const
+inline bool Options::desynchronisedLogsEnabled() const
 {
   return config.value("desync_logs", false).toBool();
 }
 
-void Options::setDesynchronisedLogsEnabled(bool value)
+inline void Options::setDesynchronisedLogsEnabled(bool value)
 {
   config.setValue("desync_logs", value);
 }
 
-bool Options::discordEnabled() const
+inline bool Options::discordEnabled() const
 {
   return config.value("discord", true).toBool();
 }
 
-void Options::setDiscordEnabled(bool value)
+inline void Options::setDiscordEnabled(bool value)
 {
   config.setValue("discord", value);
 }
 
-bool Options::shakeEnabled() const
+inline bool Options::shakeEnabled() const
 {
   return config.value("shake", true).toBool();
 }
 
-void Options::setShakeEnabled(bool value) { config.setValue("shake", value); }
+inline void Options::setShakeEnabled(bool value) { config.setValue("shake", value); }
 
-bool Options::effectsEnabled() const
+inline bool Options::effectsEnabled() const
 {
   return config.value("effects", true).toBool();
 }
 
-void Options::setEffectsEnabled(bool value)
+inline void Options::setEffectsEnabled(bool value)
 {
   config.setValue("effects", value);
 }
 
-bool Options::networkedFrameSfxEnabled() const
+inline bool Options::networkedFrameSfxEnabled() const
 {
   return config.value("framenetwork", true).toBool();
 }
 
-void Options::setNetworkedFrameSfxEnabled(bool value)
+inline void Options::setNetworkedFrameSfxEnabled(bool value)
 {
   config.setValue("framenetwork", value);
 }
 
-bool Options::colorLogEnabled() const
+inline bool Options::colorLogEnabled() const
 {
   return config.value("colorlog", true).toBool();
 }
 
-void Options::setColorLogEnabled(bool value)
+inline void Options::setColorLogEnabled(bool value)
 {
   config.setValue("colorlog", value);
 }
 
-bool Options::clearSoundsDropdownOnPlayEnabled() const
+inline bool Options::clearSoundsDropdownOnPlayEnabled() const
 {
   return config.value("stickysounds", true).toBool();
 }
 
-void Options::setClearSoundsDropdownOnPlayEnabled(bool value)
+inline void Options::setClearSoundsDropdownOnPlayEnabled(bool value)
 {
   config.setValue("stickysounds", value);
 }
 
-bool Options::clearEffectsDropdownOnPlayEnabled() const
+inline bool Options::clearEffectsDropdownOnPlayEnabled() const
 {
   return config.value("stickyeffects", true).toBool();
 }
 
-void Options::setClearEffectsDropdownOnPlayEnabled(bool value)
+inline void Options::setClearEffectsDropdownOnPlayEnabled(bool value)
 {
   config.setValue("stickyeffects", value);
 }
 
-bool Options::clearPreOnPlayEnabled() const
+inline bool Options::clearPreOnPlayEnabled() const
 {
   return config.value("stickypres", true).toBool();
 }
 
-void Options::setClearPreOnPlayEnabled(bool value)
+inline void Options::setClearPreOnPlayEnabled(bool value)
 {
   config.setValue("stickypres", value);
 }
 
-bool Options::customChatboxEnabled() const
+inline bool Options::customChatboxEnabled() const
 {
   return config.value("customchat", true).toBool();
 }
 
-void Options::setCustomChatboxEnabled(bool value)
+inline void Options::setCustomChatboxEnabled(bool value)
 {
   config.setValue("customchat", value);
 }
 
-bool Options::characterStickerEnabled() const
+inline bool Options::characterStickerEnabled() const
 {
   return config.value("sticker", true).toBool();
 }
 
-void Options::setCharacterStickerEnabled(bool value)
+inline void Options::setCharacterStickerEnabled(bool value)
 {
   config.setValue("sticker", value);
 }
 
-bool Options::continuousPlaybackEnabled() const
+inline bool Options::continuousPlaybackEnabled() const
 {
   return config.value("continuous_playback", true).toBool();
 }
 
-void Options::setContinuousPlaybackEnabled(bool value)
+inline void Options::setContinuousPlaybackEnabled(bool value)
 {
   config.setValue("continuous_playback", value);
 }
 
-bool Options::stopMusicOnCategoryEnabled() const
+inline bool Options::stopMusicOnCategoryEnabled() const
 {
   return config.value("category_stop", true).toBool();
 }
 
-void Options::setStopMusicOnCategoryEnabled(bool value)
+inline void Options::setStopMusicOnCategoryEnabled(bool value)
 {
   config.setValue("category_stop", value);
 }
 
-bool Options::logToTextFileEnabled() const
+inline bool Options::logToTextFileEnabled() const
 {
   return config.value("automatic_logging_enabled", true).toBool();
 }
 
-void Options::setLogToTextFileEnabled(bool value)
+inline void Options::setLogToTextFileEnabled(bool value)
 {
   config.setValue("automatic_logging_enabled", value);
 }
 
-bool Options::logToDemoFileEnabled() const
+inline bool Options::logToDemoFileEnabled() const
 {
   return config.value("demo_logging_enabled", true).toBool();
 }
 
-void Options::setLogToDemoFileEnabled(bool value)
+inline void Options::setLogToDemoFileEnabled(bool value)
 {
   config.setValue("demo_logging_enabled", value);
 }
@@ -464,36 +464,36 @@ QString Options::subTheme() const
   return settingsSubTheme();
 }
 
-QString Options::settingsSubTheme() const
+inline QString Options::settingsSubTheme() const
 {
   return config.value("subtheme", "server").toString();
 }
 
-void Options::setSettingsSubTheme(QString value)
+inline void Options::setSettingsSubTheme(QString value)
 {
   config.setValue("subtheme", value);
 }
 
-QString Options::serverSubTheme() const { return m_server_subtheme; }
+inline QString Options::serverSubTheme() const { return m_server_subtheme; }
 
-void Options::setServerSubTheme(QString value) { m_server_subtheme = value; }
+inline void Options::setServerSubTheme(QString value) { m_server_subtheme = value; }
 
-bool Options::animatedThemeEnabled() const
+inline bool Options::animatedThemeEnabled() const
 {
   return config.value("animated_theme", true).toBool();
 }
 
-void Options::setAnimatedThemeEnabled(bool value)
+inline void Options::setAnimatedThemeEnabled(bool value)
 {
   config.setValue("animated_theme", value);
 }
 
-QString Options::defaultScalingMode() const
+inline QString Options::defaultScalingMode() const
 {
   return config.value("default_scaling", "fast").toString();
 }
 
-void Options::setDefaultScalingMode(QString value)
+inline void Options::setDefaultScalingMode(QString value)
 {
   config.setValue("default_scaling", value);
 }
@@ -503,57 +503,57 @@ QStringList Options::mountPaths() const
   return config.value("mount_paths").value<QStringList>();
 }
 
-void Options::setMountPaths(QStringList value)
+inline void Options::setMountPaths(QStringList value)
 {
   config.setValue("mount_paths", value);
 }
 
-bool Options::playerCountOptout() const
+inline bool Options::playerCountOptout() const
 {
   return config.value("player_count_optout", false).toBool();
 }
 
-void Options::setPlayerCountOptout(bool value)
+inline void Options::setPlayerCountOptout(bool value)
 {
   config.setValue("player_count_optout", value);
 }
 
-bool Options::playSelectedSFXOnIdle() const
+inline bool Options::playSelectedSFXOnIdle() const
 {
   return config.value("sfx_on_idle", false).toBool();
 }
 
-void Options::setPlaySelectedSFXOnIdle(bool value)
+inline void Options::setPlaySelectedSFXOnIdle(bool value)
 {
   config.setValue("sfx_on_idle", value);
 }
 
-bool Options::evidenceDoubleClickEdit() const
+inline bool Options::evidenceDoubleClickEdit() const
 {
   return config.value("evidence_double_click", true).toBool();
 }
 
-void Options::setEvidenceDoubleClickEdit(bool value)
+inline void Options::setEvidenceDoubleClickEdit(bool value)
 {
   config.setValue("evidence_double_click", value);
 }
 
-QString Options::alternativeMasterserver() const
+inline QString Options::alternativeMasterserver() const
 {
   return config.value("master", "").toString();
 }
 
-void Options::setAlternativeMasterserver(QString value)
+inline void Options::setAlternativeMasterserver(QString value)
 {
   config.setValue("master", value);
 }
 
-QString Options::language() const
+inline QString Options::language() const
 {
   return config.value("language", QLocale::system().name()).toString();
 }
 
-void Options::setLanguage(QString value) { config.setValue("language", value); }
+inline void Options::setLanguage(QString value) { config.setValue("language", value); }
 
 QStringList Options::callwords() const
 {
@@ -567,36 +567,36 @@ QStringList Options::callwords() const
   return l_callwords;
 }
 
-void Options::setCallwords(QStringList value)
+inline void Options::setCallwords(QStringList value)
 {
   config.setValue("callwords", value);
 }
 
 // ------ TRIPLEX ADDITIONS ------ //
 
-TableData Options::downloadManager() const
+inline TableData Options::downloadManager() const
 {
   return downloadTableData;
 }
 
-void Options::setDownloadManager(TableData data)
+inline void Options::setDownloadManager(TableData data)
 {
   downloadTableData = data;
 }
 
-void Options::clearDownloadManager(TableData data)
+inline void Options::clearDownloadManager(TableData data)
 {
   data.headers.clear();
   data.rows.clear();
   downloadTableData = data;
 }
 
-TableData Options::serverDownloadManager() const
+inline TableData Options::serverDownloadManager() const
 {
   return m_server_download_table;
 }
 
-void Options::setServerDownloadManager(TableData data)
+inline void Options::setServerDownloadManager(TableData data)
 {
   m_server_download_table = data;
 }
@@ -608,68 +608,68 @@ void Options::clearServerDownloadManager(TableData data)
   m_server_download_table = data;
 }
 
-bool Options::hideTyping() const
+inline bool Options::hideTyping() const
 {
   return config.value("hide_typing", false).toBool();
 }
 
-void Options::setHideTyping(bool value)
+inline void Options::setHideTyping(bool value)
 {
   config.setValue("hide_typing", value);
 }
 
-bool Options::stopTypingIcon() const
+inline bool Options::stopTypingIcon() const
 {
   return config.value("stop_typing", false).toBool();
 }
 
-void Options::setStopTypingIcon(bool value)
+inline void Options::setStopTypingIcon(bool value)
 {
   config.setValue("stop_typing", value);
 }
 
-bool Options::assetStreaming() const
+inline bool Options::assetStreaming() const
 {
   return config.value("asset_streaming", false).toBool();
 }
 
-void Options::setAssetStreaming(bool value)
+inline void Options::setAssetStreaming(bool value)
 {
   config.setValue("asset_streaming", value);
 }
 
-bool Options::imageStreaming() const
+inline bool Options::imageStreaming() const
 {
   return config.value("image_streaming", false).toBool();
 }
 
-void Options::setImageStreaming(bool value)
+inline void Options::setImageStreaming(bool value)
 {
   config.setValue("image_streaming", value);
 }
 
-bool Options::menuBarLocked() const
+inline bool Options::menuBarLocked() const
 {
   return config.value("menu_bar_visible_btn", false).toBool();
 }
 
-void Options::setMenuBarLocked(bool value)
+inline void Options::setMenuBarLocked(bool value)
 {
   config.setValue("menu_bar_visible_btn", value);
 }
 
-bool Options::crossfade() const
+inline bool Options::crossfade() const
 {
   return config.value("crossfade", true).toBool();
 }
 
-void Options::setCrossfade(bool value)
+inline void Options::setCrossfade(bool value)
 {
   config.setValue("crossfade", value);
 }
 // ------------------------------ //
 
-void Options::clearConfig() { config.clear(); }
+inline void Options::clearConfig() { config.clear(); }
 
 QVector<server_type> Options::favorites()
 {
@@ -773,7 +773,7 @@ void Options::updateFavorite(server_type server, int index)
   favorite.sync();
 }
 
-QString Options::getUIAsset(QString f_asset_name)
+inline QString Options::getUIAsset(QString f_asset_name)
 {
   QStringList l_paths{":/base/themes/" + Options::getInstance().theme() + "/" +
                       f_asset_name};
